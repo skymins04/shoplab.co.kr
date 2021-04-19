@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
+
+html, body {
+    width: 100%; margin: 0; font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden;
+    a { text-decoration: none; }
+    ul, li { list-style: none; }
+}
+
+@keyframes hoverColor {
+    from {
+        background-color: #2C81CA;
+    }
+    to {
+        background-color: #226fb3;
+    }
+}
+
+header {
+    width: 100%; height: 22%; position: relative; z-index: 100;
+    .header-top {
+        position: absolute; display: flex; justify-content: center; top: 0; width: 100%; height: 70%; background-color: white;
+        .logo { height: 100%; display: flex; justify-content: center; flex-direction: column;
+            a { margin-top: 20px; }
+            a > img { height: 80px; }
+        }
+        .menu-layer {
+            position: absolute; width: 100%; height: 100%;
+            ul {
+                position: absolute; display: flex; flex-direction: row; padding: 0; bottom: 0;
+                li {
+                    margin: 0 10px;
+                    a { color: rgb(160, 160, 160); font-weight: 400; font-size: 18px; }
+                    a:hover { color: black; }
+                }
+                .active-page {
+                    background-color: #2C81CA; padding: 3px 10px; margin-top: 0; border-radius: 20px;
+                    a { color: white; font-weight: 500; }
+                    a:hover { color: #7cb1df; }
+                }
+                .sep { margin-bottom: 3px; color: rgb(160, 160, 160); }
+            }
+            .menu-1 { left: 60px; }
+            .menu-2 { right: 60px; }
+        }
+    }
+    .header-bottom {
+        position: absolute;bottom: 0; width: 100%; height: 30%; background-color: #2C81CA;
+        .menu-3 {
+            position: absolute; width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: space-around; padding: 0; margin: 0;
+            li {
+                margin: 0 10px; height: 100%; width: calc(100% / 5 - 10px); padding: 0 10px;
+                a { display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; color: white; font-weight: bolder; font-size: 20px; }
+                a:hover { animation: hoverColor .1s; background-color: #226fb3; }
+            }
+        }
+    }
+}
+
+.main-jumbotron {
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    height: 78%;
+    background-color: #2C81CA;
+    
+    .slidecontrol {
+        position: absolute; width: 100%; height: 100%; z-index: 4;
+        .btn > div {
+            position: absolute; width: 100px; height: 100px; background-color: gray; opacity: .5; top: calc(50% - 50px); border-radius: 50px;
+            svg {
+                width: 80%; height: 100%; fill: white !important;
+            }
+        }
+        #back-btn { left: 20px; cursor: pointer; svg { margin-left: 5%; } }
+        #next-btn { right: 20px; cursor: pointer; svg { margin-left: 15%; } }
+
+        .statusbar > ul { 
+            position: absolute; display: flex; justify-content: space-around; width: 60%; padding: 0; margin: 0 20%; bottom: 105px;
+            li {
+                display: flex; align-items: center; flex-direction: column;
+                .dot { background-color: rgb(180, 180, 180); width: 30px; height: 30px; border-radius: 15px; cursor: pointer;}
+                .text { position: absolute; font-size: 24px; font-weight: bolder; color: rgb(180, 180, 180); top: 40px;}
+            }
+        }
+        .statusbar > span {
+            position: absolute; width: 46%; height: 1px; padding: 0; margin: 0 27%; bottom: 118px; background-color: rgb(180, 180, 180);
+        }
+    }
+
+    .slideshow {
+        position: absolute; width: 100%; height: 100%; padding: 0; margin: 0; z-index: 1;
+        li {
+            position: absolute; display: none; opacity: 0; width: 100%; height: 100%;
+            .content {
+                position: absolute; width: 100%; height: 100%; opacity: 1; z-index: 3;
+                .symbol {
+                    position: absolute; width: 200px; height: 200px; opacity: 1; top: calc(50% - 150px); left: 450px;
+                    svg {opacity: 1;}
+                    path { fill: white; }
+                }
+
+                h1 { position: absolute; font-size: 80px; color: white; opacity: 1; top: 100px; left: calc(450px + 300px); }
+                span { 
+                    position: absolute; font-size: 40px; font-weight: lighter; color: white; opacity: 1; top: 280px; left: calc(450px + 300px);
+                }
+            }
+            .slide-overlay {
+                position: absolute; width: 100%; height: 100%; opacity: 0.8; z-index: 2;
+            }
+            img { width: 100%; height: 100%; }
+        }
+
+        .slide-1 { display: block; opacity: 1;}
+        .slide-1 > div {
+            position: absolute; display: flex; justify-content: space-evenly; align-items: center; width: 100%; height: 90%; margin-bottom: 10%;
+
+            .icon { width: 40%; margin-left: 100px; }
+            .text > h1 { 
+                margin: 0; margin-right: 100px; color: white; font-size: 100px; font-weight: lighter; 
+                span{ font-weight: bolder; }
+            }   
+        }
+    }
+}
+
+.header-fix { top: 0; position: fixed; }
+
+//.mainjumbotron-activepage { background-color: #2C81CA !important; border: 10px solid white !important; width: 30px !important; height: 30px !important; border-radius: 30px !important; }
+.mainjumbotron-activedot { background-color: white !important; }
+.mainjumbotron-activetext { color: white !important; }

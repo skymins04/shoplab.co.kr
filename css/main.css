@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap");
+html, body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow-x: hidden;
+}
+
+html a, body a {
+  text-decoration: none;
+}
+
+html ul, html li, body ul, body li {
+  list-style: none;
+}
+
+@-webkit-keyframes hoverColor {
+  from {
+    background-color: #2C81CA;
+  }
+  to {
+    background-color: #226fb3;
+  }
+}
+
+@keyframes hoverColor {
+  from {
+    background-color: #2C81CA;
+  }
+  to {
+    background-color: #226fb3;
+  }
+}
+
+header {
+  width: 100%;
+  height: 22%;
+  position: relative;
+  z-index: 100;
+}
+
+header .header-top {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  background-color: white;
+}
+
+header .header-top .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .header-top .logo a {
+  margin-top: 20px;
+}
+
+header .header-top .logo a > img {
+  height: 80px;
+}
+
+header .header-top .menu-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+header .header-top .menu-layer ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  bottom: 0;
+}
+
+header .header-top .menu-layer ul li {
+  margin: 0 10px;
+}
+
+header .header-top .menu-layer ul li a {
+  color: #a0a0a0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+header .header-top .menu-layer ul li a:hover {
+  color: black;
+}
+
+header .header-top .menu-layer ul .active-page {
+  background-color: #2C81CA;
+  padding: 3px 10px;
+  margin-top: 0;
+  border-radius: 20px;
+}
+
+header .header-top .menu-layer ul .active-page a {
+  color: white;
+  font-weight: 500;
+}
+
+header .header-top .menu-layer ul .active-page a:hover {
+  color: #7cb1df;
+}
+
+header .header-top .menu-layer ul .sep {
+  margin-bottom: 3px;
+  color: #a0a0a0;
+}
+
+header .header-top .menu-layer .menu-1 {
+  left: 60px;
+}
+
+header .header-top .menu-layer .menu-2 {
+  right: 60px;
+}
+
+header .header-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #2C81CA;
+}
+
+header .header-bottom .menu-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+header .header-bottom .menu-3 li {
+  margin: 0 10px;
+  height: 100%;
+  width: calc(100% / 5 - 10px);
+  padding: 0 10px;
+}
+
+header .header-bottom .menu-3 li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+header .header-bottom .menu-3 li a:hover {
+  -webkit-animation: hoverColor .1s;
+          animation: hoverColor .1s;
+  background-color: #226fb3;
+}
+
+.main-jumbotron {
+  position: absolute;
+  top: 22%;
+  width: 100%;
+  height: 78%;
+  background-color: #2C81CA;
+}
+
+.main-jumbotron .slidecontrol {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.main-jumbotron .slidecontrol .btn > div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  opacity: .5;
+  top: calc(50% - 50px);
+  border-radius: 50px;
+}
+
+.main-jumbotron .slidecontrol .btn > div svg {
+  width: 80%;
+  height: 100%;
+  fill: white !important;
+}
+
+.main-jumbotron .slidecontrol #back-btn {
+  left: 20px;
+  cursor: pointer;
+}
+
+.main-jumbotron .slidecontrol #back-btn svg {
+  margin-left: 5%;
+}
+
+.main-jumbotron .slidecontrol #next-btn {
+  right: 20px;
+  cursor: pointer;
+}
+
+.main-jumbotron .slidecontrol #next-btn svg {
+  margin-left: 15%;
+}
+
+.main-jumbotron .slidecontrol .statusbar > ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60%;
+  padding: 0;
+  margin: 0 20%;
+  bottom: 105px;
+}
+
+.main-jumbotron .slidecontrol .statusbar > ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-jumbotron .slidecontrol .statusbar > ul li .dot {
+  background-color: #b4b4b4;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.main-jumbotron .slidecontrol .statusbar > ul li .text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #b4b4b4;
+  top: 40px;
+}
+
+.main-jumbotron .slidecontrol .statusbar > span {
+  position: absolute;
+  width: 46%;
+  height: 1px;
+  padding: 0;
+  margin: 0 27%;
+  bottom: 118px;
+  background-color: #b4b4b4;
+}
+
+.main-jumbotron .slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.main-jumbotron .slideshow li {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-jumbotron .slideshow li .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 3;
+}
+
+.main-jumbotron .slideshow li .content .symbol {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  top: calc(50% - 150px);
+  left: 450px;
+}
+
+.main-jumbotron .slideshow li .content .symbol svg {
+  opacity: 1;
+}
+
+.main-jumbotron .slideshow li .content .symbol path {
+  fill: white;
+}
+
+.main-jumbotron .slideshow li .content h1 {
+  position: absolute;
+  font-size: 80px;
+  color: white;
+  opacity: 1;
+  top: 100px;
+  left: calc(450px + 300px);
+}
+
+.main-jumbotron .slideshow li .content span {
+  position: absolute;
+  font-size: 40px;
+  font-weight: lighter;
+  color: white;
+  opacity: 1;
+  top: 280px;
+  left: calc(450px + 300px);
+}
+
+.main-jumbotron .slideshow li .slide-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.main-jumbotron .slideshow li img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-jumbotron .slideshow .slide-1 {
+  display: block;
+  opacity: 1;
+}
+
+.main-jumbotron .slideshow .slide-1 > div {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 90%;
+  margin-bottom: 10%;
+}
+
+.main-jumbotron .slideshow .slide-1 > div .icon {
+  width: 40%;
+  margin-left: 100px;
+}
+
+.main-jumbotron .slideshow .slide-1 > div .text > h1 {
+  margin: 0;
+  margin-right: 100px;
+  color: white;
+  font-size: 100px;
+  font-weight: lighter;
+}
+
+.main-jumbotron .slideshow .slide-1 > div .text > h1 span {
+  font-weight: bolder;
+}
+
+.header-fix {
+  top: 0;
+  position: fixed;
+}
+
+.mainjumbotron-activedot {
+  background-color: white !important;
+}
+
+.mainjumbotron-activetext {
+  color: white !important;
+}
+/*# sourceMappingURL=main.css.map */
