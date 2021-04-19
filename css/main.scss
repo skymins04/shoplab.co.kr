@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
 
 html, body {
-    width: 100%; margin: 0; font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden;
+    width: 100%; margin: 0; font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden; overflow-y: auto;
     a { text-decoration: none; }
     ul, li { list-style: none; }
 }
@@ -119,6 +119,31 @@ header {
                 margin: 0; margin-right: 100px; color: white; font-size: 100px; font-weight: lighter; 
                 span{ font-weight: bolder; }
             }   
+        }
+    }
+}
+
+article {
+    position: absolute; width: 100%; top: 100%;
+
+    .arti-vision {
+        display: flex; justify-content: space-between; padding-top: 70px; padding-bottom: 100px;
+
+        .left { 
+            margin-top: 200px; margin-left: 230px;
+            .text-box > .title { font-size: 27px; font-weight: bolder; margin-top: 30px; margin-bottom: 30px;}
+            .text-box > .text { line-height: 29px; margin-bottom: 30px; }
+            .text-box > a { color: black; font-weight: bolder; border-bottom: 5px solid black;}
+        }
+        .right {
+            .title {
+                display: flex; align-items: center;
+                .text { 
+                    font-weight: bolder; font-size: 80px; margin-bottom: 20px; 
+                    span { color: #2C81CA; }
+                }
+                .line { width: 40%; height: 10px; margin-left: 30px; background-color: black;}
+            }
         }
     }
 }

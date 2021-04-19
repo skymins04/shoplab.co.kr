@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 html a, body a {
@@ -403,6 +404,72 @@ header .header-bottom .menu-3 li a:hover {
 
 .main-jumbotron .slideshow .slide-1 > div .text > h1 span {
   font-weight: bolder;
+}
+
+article {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+}
+
+article .arti-vision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+article .arti-vision .left {
+  margin-top: 200px;
+  margin-left: 230px;
+}
+
+article .arti-vision .left .text-box > .title {
+  font-size: 27px;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+article .arti-vision .left .text-box > .text {
+  line-height: 29px;
+  margin-bottom: 30px;
+}
+
+article .arti-vision .left .text-box > a {
+  color: black;
+  font-weight: bolder;
+  border-bottom: 5px solid black;
+}
+
+article .arti-vision .right .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article .arti-vision .right .title .text {
+  font-weight: bolder;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+article .arti-vision .right .title .text span {
+  color: #2C81CA;
+}
+
+article .arti-vision .right .title .line {
+  width: 40%;
+  height: 10px;
+  margin-left: 30px;
+  background-color: black;
 }
 
 .header-fix {
