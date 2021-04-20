@@ -473,7 +473,6 @@ article .arti-vision .right .title .line {
 }
 
 article .arti-service {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,6 +564,72 @@ article .arti-service a {
   color: black;
   border-bottom: 5px solid black;
   margin-bottom: 70px;
+}
+
+article .arti-history {
+  width: 100%;
+}
+
+article .arti-history .table-area {
+  width: 75%;
+  margin: 100px 12.5% 120px 12.5%;
+}
+
+article .arti-history .table-area .table-title {
+  width: 100%;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: right;
+}
+
+article .arti-history .table-area .table-title .line {
+  width: 100%;
+  height: 10px;
+  margin: 20px 0 45px 0;
+  background-color: black;
+}
+
+article .arti-history .table-area .table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+article .arti-history .table-area .table-row .left {
+  width: 25%;
+}
+
+article .arti-history .table-area .table-row .left .text {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+article .arti-history .table-area .table-row .right {
+  width: 75%;
+}
+
+article .arti-history .table-area .table-row .right ul {
+  padding: 0;
+  margin: 0;
+}
+
+article .arti-history .table-area .table-row .right ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #cfcfcf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+}
+
+article .arti-history .table-area .table-row .right ul li .text {
+  font-weight: lighter;
 }
 
 .header-fix {
