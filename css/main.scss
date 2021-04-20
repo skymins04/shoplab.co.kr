@@ -208,6 +208,42 @@ article {
         .text { text-align: center; margin-bottom: 40px; color: white; }
         a { color: white; font-weight: bolder; border-bottom: 5px solid white; }
     }
+    .arti-pre {
+        display: flex; justify-content: center; width: 100%; height: max-content; margin-top: calc(11% - 1px);
+    }
+    .arti-contact {
+        display: flex; justify-content: center; align-items: center; width: 100%; height: max-content; margin-top: calc(11% - 1px);
+        .left {
+            display: flex; justify-content: center; align-items: center; width: calc(50% - 2px); height: 700px;
+            .map {
+                .title { font-size: 50px; font-weight: bolder; }
+                .addr { margin: 30px 0; }
+            }
+        }
+        .sep {
+            width: 4px; height: 300px; background-color: #2C81CA;
+        }
+        .right {
+            display: flex; justify-content: center; align-items: center; width: calc(50% - 2px); height: 700px;
+            .inquiry {
+                .title { font-size: 50px; font-weight: bolder; }
+                form { 
+                    display: flex; flex-direction: column; justify-content: center; width: 640px; height: 564px; margin-left: 30px;
+                    .name, .tel, .email { 
+                        display: flex; align-items: center; font-size: 27px; width: 350px; margin: 15px 0;
+                        input { margin-left: 30px; height: 100%;}
+                    }
+                    .text {
+                        display: flex; flex-direction: column; justify-content: left; font-size: 27px; margin-top: 20px;
+                        textarea { height: 220px;}
+                    }
+                    button {
+                        font-size: 18px; margin-left: 80.5%; width: max-content; margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer {
