@@ -51,6 +51,18 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     }
 }
 
+@keyframes morebtn-move {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes morebtn-background {
+    to {
+        background-color: #2c80ca;
+    }
+}
+
 @media (max-width: 1470px) {
     .menu-layer {
         display: none;
@@ -107,15 +119,61 @@ header {
     }
 }
 
+.semi-header {
+    position: absolute; display: flex; align-items: center; justify-content: space-between; top: 0; width: 100%; z-index: 6;
+    .title {
+        color: white; font-size: 60px; margin-left: 40px; margin-top: 20px;
+    }
+    .hambuger {
+        display: flex; flex-direction: column; align-items: center; justify-content: space-around; width: 40px; height: 40px; margin-right: 40px; cursor: pointer;
+        
+        span {
+            width: 100%;
+            height: 5px;
+            background-color: #fff;
+            transition: .7s;
+        }
+    }
+}
+
+.hambuger-menu {
+    position: fixed; width: 100%; height: 100%; z-index: 5; background-color: rgba(22, 22, 22, 0.562); display: none; opacity: 0;
+
+    .content {
+        display: flex; justify-content: center; align-items: center; position: fixed; background-color: white; width: 500px; height: 100%; right: -500px;
+        .menu-list {
+            margin-right: 150px;
+            ul {
+                margin: 50px 0; padding: 0; border-bottom: 10px solid #6da9dd;
+                li {
+                    margin: 20px 0;
+                    padding: 10px;
+                    a {
+                        color: black; font-size: 40px;
+                    }
+                }
+                li:hover {
+                    a {
+                        color: #226fb3;
+                    }
+                    transition: .5s;
+                    background-color: #f7fbff;
+                }
+            }
+        }
+    }
+}
+
+.goto-top {
+    position: fixed; width: 70px; z-index: 7; right: 2%; bottom: 5%; cursor: pointer; opacity: 0; display: none;
+}
+
 .main-jumbotron {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #2C81CA;
-    overflow: hidden;
+    position: relative; width: 100%; height: 100%; background-color: #2C81CA; overflow: hidden;
     
     .slidecontrol {
         position: absolute; width: 100%; height: 20%; bottom: 0; z-index: 4;
+        
         .icon-group {
             position: absolute; right: 3%; bottom: 10%; width: 100px; display: flex; flex-direction: column; align-items: center;
             animation: scroll-move infinite alternate-reverse .75s;
@@ -164,7 +222,7 @@ header {
         li {
             position: absolute; display: none; opacity: 0; width: 100%; height: 100%;
             .content {
-                position: absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 90%; opacity: 1; z-index: 3;
+                position: absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; opacity: 1; z-index: 3;
                 .content-area {
                     position: absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 500px; padding-left: 30px;
 
@@ -176,14 +234,15 @@ header {
                         margin-left: 80px;
                         h1 { width: max-content; margin: 0 0 30px 200px; font-size: 80px; color: white; }
                         div { width: max-content; margin: 0; margin-left: 200px; font-size: 40px; font-weight: 400; color: white; }
-                        .more-btn { display: flex; justify-content: center; align-items: center; width: 100px; height: 40px; margin-top: 40px; border-radius: 25px; border: 5px solid white; color: white; font-size: 24px; font-weight: bolder; }
+                        .more-btn { animation: morebtn-move infinite alternate-reverse .5s; display: flex; justify-content: center; align-items: center; width: 100px; height: 40px; margin-top: 40px; margin-left: 200px; border-radius: 25px; border: 5px solid white; color: white; font-size: 24px; font-weight: bolder; }
+                        .more-btn:hover { transition: .5s; background-color: #2c80ca; }
                     }
                 }
             }
             .slide-overlay {
                 position: absolute; width: 100%; height: 100%; opacity: 0.8; z-index: 2;
             }
-            .slide-background { position: fixed; width: 100%; height: 100%; z-index: 1;}
+            .slide-background { position: fixed; width: 100%; z-index: 1; filter: blur(2px);}
         }
 
         .slide-1 { display: block; opacity: 1;}
